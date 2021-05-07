@@ -1,0 +1,72 @@
+
+.logo {
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+}
+
+.title {
+    margin: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 16px;
+    text-align: start;
+
+    color: #181725;
+}
+
+.form-field {
+    padding: 2rem 2rem;
+
+}
+
+.form-field form label{
+    display: block;
+    margin-top: 2.5rem;
+    color: #7C7C7C;
+    font-size: 1.5rem;
+}
+
+.form-field form input {
+    height: 4rem;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #E2E2E2;
+    background: transparent;
+    outline: none;
+}
+
+.forget-pass {
+    float: right;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.entry-button {
+    text-align: center;
+    padding: 4rem 0 0;
+}
+
+.entry-button button {
+    border: none;
+    background: #F1186A;
+    border-radius: 2rem;
+    padding: 2.5rem 14rem;
+    font-weight: bold;
+    color: #FFF9FF;
+}
+
+.signup {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.2rem;
+    color: #181725;
+}
+
+.signup p {
+    padding: 0.5rem;
+}
+
+.signup span {
+    color: #F1186A;   
+}
