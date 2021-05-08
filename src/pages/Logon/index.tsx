@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import './style.css';
 import logo from '../../assets/logo-2.svg';
 
@@ -26,7 +28,7 @@ const Home = () => {
             </div>
             <div className="signup">
                 <p>Ainda não possui conta?</p>
-                <span>Cadastre-se</span>
+                <span> <Link to='/new' >Cadastre-se</Link> </span>
             </div>
         </div>
     )
