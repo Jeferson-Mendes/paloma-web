@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import logo from '../../assets/logo-2.svg';
 
-const Home = () => {
+const Logon = () => {
 
     return (
         <div id="login-container">
@@ -34,4 +34,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Logon;
