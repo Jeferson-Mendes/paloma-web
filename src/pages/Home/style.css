@@ -1,0 +1,66 @@
+
+.product-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 18rem);
+    gap: 1.8rem;
+}
+
+.grid figure {
+    border: 1px solid #E2E2E2;
+    border-radius: 18px;
+
+    padding: 1.4rem;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    color: #181725;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.category {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+
+    color: #7C7C7C;
+    margin-top: 1.4rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+}
+
+.price-info button {
+    border: none;
+    background: #F1186A;
+    border-radius: 1.4rem;
+    text-align: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    color: #fff;
+    font-size: 4rem;
+}
+
+.price {
+    
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    color: #181725;
+}

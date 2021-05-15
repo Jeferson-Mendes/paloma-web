@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-
-import { FiChevronLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
+import { TextField } from '@material-ui/core';
+import { ArrowBackIos } from '@material-ui/icons';
 
 import ConfirmSignUpModal from '../../components/modals/signupModal';
 
-import './style.css';
 
 const SignUp = () => {
 
@@ -24,27 +23,74 @@ const SignUp = () => {
     return (    
         <div className="signup-container">
             {triggerModal === true ? <ConfirmSignUpModal/> : ''}
-            <FiChevronLeft onClick={handleHistory} className="arrow-left"/>
+            <ArrowBackIos onClick={handleHistory} style={{ fontSize: 20, margin: '2rem' }} />
             <h2 className="title">Cadastro</h2>
             <div className="form-field">
                 <form >
-                    <label htmlFor="name">Nome</label>
-                    <input type="text" name="name"/>
-
-                    <label htmlFor="whatsapp">Whatsapp</label>
-                    <input type="text" name="whatsapp"/>
-
-                    <label htmlFor="cep">Cep</label>
-                    <input type="text" name="cep"/>
-
-                    <label htmlFor="rua">Rua/número</label>
-                    <input type="text" name="rua"/>
-
-                    <label htmlFor="bairro">Bairro</label>
-                    <input type="text" name="bairro"/>
-
-                    <label htmlFor="complemento">Complemento</label>
-                    <input type="text" name="complemento"/>
+                    <TextField
+                    id="standard-full-width"
+                    label="Nome"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Whatsapp"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Cep"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Rua"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Número"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Bairro"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Cidade"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Complemento"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
                 </form>
             </div>
             

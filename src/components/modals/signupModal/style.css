@@ -27,6 +27,13 @@
     color: #F1186A;
 }
 
+.close-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 4rem;
+}
+
 .content-message span {
     display: inline-block;
     padding: 2rem;

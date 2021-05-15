@@ -27,23 +27,15 @@
 .form-field form {
     width: 100%;
     text-align: center;
+    overflow: hidden;
 }
 
-.form-field form label{
-    display: block;
-    margin-top: 2.5rem;
-    color: #7C7C7C;
-    font-size: 1.5rem;
-    text-align: initial;
+.form-field form label {
+    font-size: 2.1rem;
 }
 
 .form-field form input {
-    height: 4rem;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #E2E2E2;
-    background: transparent;
-    outline: none;
+    font-size: 2rem;
 }
 
 .forget-pass {

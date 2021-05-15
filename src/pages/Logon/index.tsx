@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextField } from '@material-ui/core';
 
 import { Link } from 'react-router-dom';
 
@@ -14,17 +15,29 @@ const Logon = () => {
             </div>
             <h2 className="title">Seja bem vindo!</h2>
             <div className="form-field">
-                <form >
-                    <label htmlFor="login">Login</label>
-                    <input type="text" name="login"/>
-
-                    <label htmlFor="password">Senha</label>
-                    <input type="text" name="password"/>
+                <form noValidate autoComplete="off">
+                    <TextField
+                    id="standard-full-width"
+                    label="Login"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    color='secondary'
+                    />
+                    <TextField
+                    id="standard-full-width"
+                    label="Senha"
+                    style={{ margin: 8 }}
+                    fullWidth
+                    margin="normal"
+                    type="password"
+                    color='secondary'            
+                    />
                 </form>
             </div>
             <span className="forget-pass">Esqueceu a senha?</span>
             <div className="entry-button">
-                <button>Entrar</button>
+                <button><Link to='/home' >Entrar</Link></button>
             </div>
             <div className="signup">
                 <p>Ainda não possui conta?</p>

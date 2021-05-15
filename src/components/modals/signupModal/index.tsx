@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FiAlertCircle } from 'react-icons/fi';
+import { ErrorOutline } from '@material-ui/icons';
 
 import './style.css'
 
@@ -9,7 +9,7 @@ const ConfirmSignUpModal = () => {
         <div className="confirm-signup-modal">
             <div className="modal-content">
                 <div className="content-icon">
-                    <FiAlertCircle className="confirm-icon"/>
+                    <ErrorOutline className="confirm-icon"/>
                 </div>
                 <div className="content-message">
                     <span> Cadastro realizado com sucesso! </span>

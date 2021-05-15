@@ -1,0 +1,46 @@
+
+.header {
+    text-align: center;
+}
+
+.header-content {
+    position: absolute;
+    top: 6%;
+
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+}
+
+.store-info {
+    margin-top: 4rem;
+}
+
+.store-info .title {
+    text-align: center;
+    color: #4C4F4D;
+}
+
+.store-info .city {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: #BFC1C0;
+}
+
+.search-input {
+    outline: none;
+    background: #F2F3F2;
+    border-radius: 4rem;
+    border: none;
+    width: 80vw;
+}
+
+.search-input input {
+    width: 100%;
+    font-size: 1.5rem;
+}
