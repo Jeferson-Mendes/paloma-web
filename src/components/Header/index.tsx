@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import { Search, AccountCircleOutlined, LocalMallOutlined } from '@material-ui/icons';
+import { Search, AccountCircleOutlined, LocalMallOutlined, FiberManualRecord } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 import './style.css'
 import logo from '../../assets/logo-2.svg';
 
-const Header = () => {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    bagIsEmpty: boolean;
+    }
+
+const Header: React.FC<InputProps> = ({bagIsEmpty}) => {
     return (
         <div className="header">
             <div className="header-content">
                 <div className="profile">
-                    <AccountCircleOutlined style={{fontSize:"3rem"}}/>
+                   <Link to='/profile'> <AccountCircleOutlined style={{fontSize:"3rem"}} /> </Link>
                 </div>
                 <div className="handbag">
                     <LocalMallOutlined style={{fontSize:"3rem"}} />
+                  { bagIsEmpty ? <FiberManualRecord className="red-circle" style={{color:"#F1186A", fontSize:"2.4rem"}} /> : '' }
+                    
                 </div>
             </div>
             <div className="store-info">

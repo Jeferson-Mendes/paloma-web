@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import logo from '../../assets/logo-2.svg';
 
-const Logon = () => {
+const Logon:React.FC = () => {
 
     return (
         <div id="login-container">

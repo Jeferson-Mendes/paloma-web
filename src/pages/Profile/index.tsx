@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
-import { ArrowBackIos } from '@material-ui/icons';
+import { ArrowBackIos, ExitToApp } from '@material-ui/icons';
 
 import ConfirmSignUpModal from '../../components/modals/signupModal';
 
 
-const SignUp:React.FC = () => {
+const Profile: React.FC = () => {
 
     const [triggerModal, setTriggerModal] = useState<boolean>(false);
 
@@ -21,10 +21,11 @@ const SignUp:React.FC = () => {
     }
 
     return (    
-        <div className="signup-container">
+        <div className="profile-container">
             {triggerModal === true ? <ConfirmSignUpModal/> : ''}
-            <ArrowBackIos onClick={handleHistory} style={{ fontSize: 20, margin: '2rem' }} />
-            <h2 className="title">Cadastro</h2>
+            <ArrowBackIos onClick={handleHistory} style={{ fontSize: 24, margin: '2rem' }} />
+            <ExitToApp style={{ fontSize: 24, margin: '2rem', float:"right", color:"#FA0B0B"}}/>
+            <h2 className="title">Perfil</h2>
             <div className="form-field">
                 <form >
                     <TextField
@@ -34,6 +35,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"Paloma"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -42,6 +44,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"(88) 9 9999-9999"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -50,6 +53,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"63150-000"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -58,6 +62,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"Rua Tal"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -66,6 +71,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"10"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -74,6 +80,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"Centro"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -82,6 +89,7 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"Campos Sales"}
                     />
                     <TextField
                     id="standard-full-width"
@@ -90,15 +98,16 @@ const SignUp:React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
+                    value={"Prox. A dona menina"}
                     />
                 </form>
             </div>
             
             <div className="entry-button">
-                <button onClick={ handleSignup } style={{color:"#fff"}} >Cadastrar</button>
+                <button onClick={ handleSignup } style={{color:"#fff"}} >Salvar</button>
             </div>
         </div>
     )
 }
 
-export default SignUp;
+export default Profile;

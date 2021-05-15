@@ -47,7 +47,7 @@
 
 .entry-button {
     text-align: center;
-    padding: 4rem 0 0;
+    padding: 4rem 0 4rem 0;
 }
 
 .entry-button button {
@@ -56,6 +56,10 @@
     border-radius: 2rem;
     padding: 2.5rem 14rem;
     font-weight: bold;
+}
+
+.entry-button button a {
+    text-decoration: none;
     color: #FFF9FF;
 }
 

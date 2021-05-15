@@ -1,0 +1,21 @@
+
+.logo-choose {
+    text-align: center;
+    padding: 4rem 0 0 0;
+}
+
+.welcome-title {
+    margin: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+
+    color: #181725;
+}
+
+.choose-text {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #181725;
+}

@@ -4,7 +4,7 @@ import { ErrorOutline } from '@material-ui/icons';
 
 import './style.css'
 
-const ConfirmSignUpModal = () => {
+const ConfirmSignUpModal: React.FC = () => {
     return (
         <div className="confirm-signup-modal">
             <div className="modal-content">
