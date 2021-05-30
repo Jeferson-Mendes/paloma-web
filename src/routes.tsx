@@ -6,6 +6,7 @@ import Landing from './pages/Landing';
 import Logon from './pages/Logon';
 import Profile from './pages/Profile';
 import SignUp from './pages/Signup';
+import Bag from './pages/Bag';
 
 const Routes = () => {
     return (
@@ -15,6 +16,8 @@ const Routes = () => {
             <Route component={SignUp} path="/new" />
             <Route component={Home} path="/home" />
             <Route component={Profile} path="/profile" />
+            <Route component={Bag} path="/bag" />
+
         </BrowserRouter>
     )
     
