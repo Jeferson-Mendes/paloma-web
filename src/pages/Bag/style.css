@@ -120,7 +120,7 @@
 }
 
 .bag-products .product figure {
-    border: 0.2px solid #B3B3B3;
+    border-right: 0.2px solid #B3B3B3;
     border-radius: 1.4rem;
     margin: 0 0.4rem;
 
@@ -149,4 +149,65 @@
     font-weight: bold;
 
     margin: 1.4rem 0;
+}
+
+.finish-purchase {
+    margin-top: 2rem;
+}
+
+.finish-purchase .is-delivery-total {
+    text-align: center;
+}
+
+.finish-purchase .is-delivery-total .delivery-span {
+    font-size: 2rem;
+    color: #181725;
+
+    display: inline-block;
+    transform: translateY(50%);
+}
+
+.finish-purchase .is-delivery-total label .MuiFormControlLabel-label {
+    font-size: 1.4rem;
+}
+
+.finish-purchase .is-delivery-total .total-price {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+
+    font-weight: bold;
+}
+
+.finish-purchase .is-delivery-total .total-price span {
+    color: #F1186A;
+}
+
+.finish-purchase .is-delivery-total .confirm-button {
+    margin-top: 2rem;
+}
+
+.finish-purchase .is-delivery-total .confirm-button button{
+    border: none;
+    color: #fff;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 14rem;
+    border-radius: 2.4rem;
+
+    background: #F1186A;
+    transform: scale(0.9);
+    transition: all 400ms;
+}
+
+.finish-purchase .is-delivery-total .confirm-button button:active,
+.finish-purchase .is-delivery-total .confirm-button button:hover {
+    transform: scale(1);
+}
+
+.finish-purchase .is-delivery-total .confirm-button p {
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    color: #F1186A;
 }
