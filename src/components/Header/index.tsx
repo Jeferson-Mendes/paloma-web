@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, useContext } from 'react';
 
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
@@ -11,6 +11,7 @@ import { useHistory } from 'react-router-dom';
 import './style.css'
 import logo from '../../assets/logo-2.svg';
 import { IconButton,  } from '@material-ui/core';
+import AuthContext from '../../contexts/auth';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     bagProductsQuantity: number;
@@ -27,14 +28,16 @@ badge: {
 
 const Header: React.FC<InputProps> = ({bagProductsQuantity}) => {
 
-    const history = useHistory()
+    const { signed } = useContext(AuthContext);
 
+    const history = useHistory()
 
     return (
         <div className="header">
             <div className="header-content">
                 <div className="profile">
-                   <Link to='/profile'> <AccountCircleOutlined style={{fontSize:"3rem"}} /> </Link>
+                    {signed ? <Link to='/profile'> <AccountCircleOutlined style={{fontSize:"3rem"}} /> </Link> : '' }
+                   
                 </div>
                 <div className="handbag" onClick={ () => history.push('/bag') }>
                     <IconButton aria-label="bag">

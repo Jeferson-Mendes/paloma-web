@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
-
 import { Link } from 'react-router-dom';
 
 import './style.css';
 import logo from '../../assets/logo-2.svg';
+import AuthContext from '../../contexts/auth';
 
 const Logon:React.FC = () => {
+
+    const { signed, signIn, user } = useContext(AuthContext);
+
+    const history = useHistory();
+
+    console.log(signed);
+    console.log(user);
+
+
+    async function handleSign() {
+        signIn();
+      
+        history.push('/home')
+      }
 
     return (
         <div id="login-container">
@@ -25,7 +40,6 @@ const Logon:React.FC = () => {
                     color='secondary'
                     />
                     <TextField
-                    id="standard-full-width"
                     label="Senha"
                     style={{ margin: 8 }}
                     fullWidth
@@ -37,7 +51,7 @@ const Logon:React.FC = () => {
             </div>
             <span className="forget-pass">Esqueceu a senha?</span>
             <div className="entry-button">
-                <button><Link to='/home' >Entrar</Link></button>
+                <button onClick={handleSign} > Entrar </button>
             </div>
             <div className="signup">
                 <p>Ainda não possui conta?</p>

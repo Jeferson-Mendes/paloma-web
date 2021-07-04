@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Header from '../../components/Header';
 import productImg from '../../assets/product.svg';
+import AuthContext from '../../contexts/auth';
 
 import './style.css'
 
 const Home:React.FC = () => {
     const [chooseBagQuantity, setChooseBagQuantity] = useState<number>(0)
+
+    const { signed, signIn, user } = useContext(AuthContext);
+
+
+    console.log(signed);
+    console.log(user);
+
 
 
     const products = [

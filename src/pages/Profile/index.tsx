@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 import { ArrowBackIos, ExitToApp } from '@material-ui/icons';
+import AuthContext from '../../contexts/auth';
 
 import ConfirmSignUpModal from '../../components/modals/signupModal';
 
@@ -9,6 +10,7 @@ import ConfirmSignUpModal from '../../components/modals/signupModal';
 const Profile: React.FC = () => {
 
     const [triggerModal, setTriggerModal] = useState<boolean>(false);
+    const { signOut, user } = useContext(AuthContext);
 
     const history = useHistory();
 
@@ -20,11 +22,17 @@ const Profile: React.FC = () => {
         setTriggerModal(true);
     }
 
+    const handleSignOut = () => {
+        signOut()
+
+        history.push('/')
+    }
+
     return (    
         <div className="profile-container">
             {triggerModal === true ? <ConfirmSignUpModal/> : ''}
             <ArrowBackIos onClick={handleHistory} style={{ fontSize: 24, margin: '2rem' }} />
-            <ExitToApp style={{ fontSize: 24, margin: '2rem', float:"right", color:"#FA0B0B"}}/>
+            <ExitToApp onClick={handleSignOut} style={{ fontSize: 24, margin: '2rem', float:"right", color:"#FA0B0B"}}/>
             <h2 className="title">Perfil</h2>
             <div className="form-field">
                 <form >
@@ -35,7 +43,7 @@ const Profile: React.FC = () => {
                     fullWidth
                     margin="normal"
                     color='secondary'
-                    value={"Paloma"}
+                    value={user?.name}
                     />
                     <TextField
                     id="standard-full-width"
